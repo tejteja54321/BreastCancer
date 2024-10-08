@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<br><br><br><br>
+<h1>RESULT PAGE</h1>
+
+<!-- Container for the image and text -->
+<div class="image-container">
+    {% if data == 1 %}
+        <div class="overlay-container">
+            <img src="{{ url_for('static', filename='images/malignant1.jpg') }}" alt="Malignant">
+            <div class="overlay-text">
+                <h2>Malignant</h2>
+                <p>You have been diagnosed with a malignant condition. It is important to consult with your healthcare provider to discuss the next steps in your treatment plan.</p>
+            </div>
+        </div>
+    {% else %}
+        <div class="overlay-container">
+            <img src="{{ url_for('static', filename='images/malignant2.jpg') }}" alt="Benign">
+            <div class="overlay-text">
+                <h2>Benign</h2>
+                <p>The condition is benign. It is generally not harmful, but you should still follow up with your healthcare provider for any necessary monitoring or additional advice.</p>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

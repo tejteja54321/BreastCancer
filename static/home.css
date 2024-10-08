@@ -1,0 +1,514 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh; /* Ensure body covers the viewport */
+    margin: 0;
+    background-color: white; /* Initial background color */
+    overflow: auto; /* Allow vertical scrolling */
+    animation: changeColor 15s ease infinite;
+}
+/* 
+@keyframes changeColor {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: #5692ac;
+    }
+    100% {
+        background-color: #015687;
+    }
+}*/
+
+/* Navigation styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    flex-direction: column; /* Arrange children in columns */
+    height: 9rem; /* Full height of viewport */
+    margin: 0;
+    background-color: #ee609c; /* Background color for navigation */
+}
+
+/* Logo section styling */
+.logo-section {
+    height: 70%; /* 70% height of the navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align items horizontally */
+    width: 100%;
+    background-color: #0d8cd5; /* Background color for logo section */
+    box-shadow: rgb(234, 96, 10);
+    text-shadow: 10px 10px 20px rgba(8, 8, 8, 0.9); /* Shadow for text */
+}
+
+/* Logo styling */
+.logo {
+    color: white; /* Text color */
+    font-family: 'Roboto', sans-serif; /* Change font family */
+    text-align: center; /* Center align text within the logo */
+}
+
+.logo h1 {
+    font-size: 3rem; /* Size of the logo text */
+    margin-bottom: 5px; /* Spacing between logo and description */
+    font-weight: bold;
+    
+}
+
+.description {
+    font-size: 14px; /* Size of the description text */
+    font-family: 'Roboto', sans-serif; /* Font family for description */
+    text-align: center; /* Center align text */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Shadow for text */
+    color: #ffffff; /* Text color */
+}
+
+/* Navigation section styling */
+.navigation-section {
+    height: 30%; /* 30% height of the navbar */
+    display: flex;
+    justify-content: space-between; /* Align items at each end */
+    align-items: center;
+    background-color: #9fc8e7; /* Background color for navigation section */
+}
+
+/* Pages and Login/Register section styling */
+.pages, .login {
+    display: flex;
+}
+
+/* Navigation links styling */
+.pages ul,
+.login ul {
+    list-style-type: none; /* Removes default list styles */
+    display: flex;
+}
+
+.pages ul li,
+.login ul li {
+    margin-left: 20px; /* Spacing between navigation items */
+}
+
+.pages ul li:first-child,
+.login ul li:first-child {
+    margin-left: 0; /* No margin for the first child */
+}
+
+.pages ul li a,
+.login ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Text color */
+    padding: 8px 12px; /* Padding around link text */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and size change */
+}
+
+.pages ul li a:hover,
+.login ul li a:hover {
+    color: #030303; /* Color on hover */
+    transform: scale(1.1); /* Scale up the size on hover */
+}
+
+/* SECTION_1 */
+
+.main {
+    padding-top: 9rem; /* Adjust based on the height of your nav */
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Ensure no horizontal scrolling */
+}
+
+.sec1 {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Adjust height as needed */
+    overflow: hidden; /* Hide overflow to prevent vertical scrolling */
+}
+
+.sec1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+}
+
+.quote-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+    
+     /* Optional: Text shadow for better contrast */
+    z-index: 1; /* Ensure quote is on top of the image */
+}
+.quote-overlay q{
+    font-size: 4rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+
+/* SECTION-2 */
+
+
+.sec2 {
+    max-width: 1200px; /* Max width of the content */
+    margin: 20px auto; /* Center the content */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    justify-content: space-around; /* Evenly distribute cards */
+}
+
+.card {
+    position: relative; /* Ensure z-index works correctly */
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 10px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* 3 cards per row, adjust as needed */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-position 0.5s ease-in-out;
+    overflow: hidden; /* Ensure gradient doesn't overflow */
+    background: linear-gradient(-45deg, #f43dcd, #4838f4, #1ce1f7, #1bf16d); /* Initial gradient */
+    color: linear-gradient(-45deg, #000000, #ffffff, #090909, #f1f5f3);
+    background-size: 400% 400%; /* Size of the gradient */
+    animation: gradientAnimation 15s ease infinite; /* Animation properties */
+}
+
+.card:hover {
+    transform: translateY(-20px); /* Lift card on hover */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Slightly stronger shadow on hover */
+    background-position: 100% 100%; /* Move gradient to bottom right on hover */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    50% {
+        background-position: 100% 50%; /* Middle position */
+    }
+    100% {
+        background-position: 0% 50%; /* End position */
+    }
+}
+
+.card h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /*color: #333;  Dark text color */
+}
+
+.card p,.card-ul li {
+    font-size: 20px;
+    line-height: 1.6;
+    /*color: #666;  Medium gray text color */
+    list-style-type: none;
+}
+
+
+.card ul {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+    /*color: #666; /* Medium gray text color */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 100%; /* 1 card per row on small screens */
+    }
+}
+
+
+
+/* PREDICTIN PAGE SECTION-1 */
+
+/* Container for main content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Pagination Controls */
+.pagination {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.page-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Content sections */
+.page-content {
+    display: none; /* Hide all sections by default */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Show the active section */
+.page-content.active {
+    display: block;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* Footer section */
+
+footer {
+    background-color: #015687; /* Background color for logo section */
+    
+    text-shadow: 10px 10px 20px white; /* Shadow for text */
+    color: white;
+    padding: 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows content to wrap if necessary */
+}
+
+.footer-logo {
+    flex: 30%; /* Takes 30% of the width */
+}
+
+.footer-logo h1 {
+    text-align: center;
+}
+
+.footer-logo p {
+    font-size:small ;
+}
+
+.footer-content p {
+    flex: 70%; /* Takes 70% of the width */
+    text-align: center; /* Align text to the left */
+    margin: 0; /* Remove default margin */
+    padding: 0 10px; /* Add padding for spacing */
+}
+
+
+
+/* --------------------------------------------------------------------------------------------*/
+/* input page css */
+
+/* Overall form styling */
+.main-form {
+    background-image: url('../static/images/pic9.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Adjust as needed */
+}
+
+/* Container for the form elements */
+.form-container {
+    background-color: #bdbdbdcd;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    height: auto; 
+}
+
+/* Form columns */
+.form-columns {
+    display: flex;
+    justify-content: space-between; /* Distribute columns evenly */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Form input styling */
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"] {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #515050;
+    border-radius: 20px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.form-container input[type="text"]:hover,
+.form-container input[type="text"]:focus {
+    border-color: #57a0d3;
+    background-color: #f0f8ff;
+    transform: translateY(-3px);
+    outline: none;
+}
+
+/* Submit button styling */
+.submit-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.submit-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.submit-container input[type="submit"]:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Image styling */
+.image-container {
+    margin-top: 20px;
+    text-align: right; /* Align image to the right */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* Result Page css */
+
+
+
+/* styles.css */
+
+/* Container for positioning the image */
+.image-container {
+    text-align: center; /* Center the image */
+    margin: 0 auto; /* Center the image container */
+}
+
+/* Container for the image and overlay text */
+.overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for the image */
+.overlay-container img {
+    width: 100%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for the overlay text */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem; /* Adjust font size as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%; /* Ensure text doesn't overflow the image */
+    text-align: center; /* Center the text */
+}
+
+.overlay-text h2 {
+    margin: 0 0 10px 0; /* Space between title and paragraph */
+    font-size: 3rem; /* Adjust title size */
+}
+
+.overlay-text p {
+    margin: 0; /* Remove margin for paragraph */
+    font-size: 2rem; /* Adjust paragraph size */
+}
+
+
+/* Result Page css */
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------- */

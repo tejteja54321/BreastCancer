@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Breast Cancer Awareness</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-section">
+                <div class="logo">
+                    <h1 class="gradient-text">BREAST CANCER</h1>
+                    <p class="description">Courage - Hope - Triumph</p>
+                </div>
+            </div>
+            <div class="navigation-section">
+                <div class="pages">
+                    <ul>
+                        <li><a href="/home">HOME</a></li>
+                        <li><a href="/input">INPUT</a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="/logout">LOGOUT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% block content %}
+    <div class="main">
+        <div class="sec1">
+            <div class="quote-overlay">
+                <q>When life kicks you, let it kick you forward. - Kay Yow</q>
+            </div>
+            <img src="../static/images/pic11.jpg" alt="Breast Cancer Awareness">
+        </div>
+        <h1 style="text-align: center;font-size: 3.5rem;">Stages of Breast Cancer</h1>
+        <div class="sec2">
+            
+            <div class="card">
+                <h1>Stage 0: Carcinoma in situ (Non-invasive)</h1>
+                <p>Stage 0 refers to non-invasive breast cancers, where abnormal cells are found in the lining of a breast duct but have not spread outside the duct or lobule into nearby tissue. It is also known as carcinoma in situ (DCIS or LCIS).</p>
+            </div>
+            <div class="card">
+                <h1>Stage I: Early Stage</h1>
+                <p>
+                    <ul class="card-ul">
+                    <li>Stage IA: The tumor is 2 centimeters (cm) or smaller and has not spread outside the breast.</li>
+                    <li>Stage IB: Small clusters of breast cancer cells, between 0.2 mm and 2 mm in size, are found in the lymph nodes.</li>
+                </ul>
+                    
+                    </p>
+            </div>
+            <div class="card">
+                <h1>Stage II: Locally Advanced</h1>
+                <p>
+                    <ul class="card-ul">
+                    <li>Stage IIA: The tumor is either smaller than 2 cm and has spread to 1-3 axillary lymph nodes, or it is between 2-5 cm and has not spread to the lymph nodes.</li>
+                    <li>Stage IIB: The tumor is between 2-5 cm and has spread to 1-3 axillary lymph nodes, or it is larger than 5 cm but has not spread to the lymph nodes.</li>
+                </ul>
+                    
+                    </p>
+            </div>
+            <div class="card">
+                <h1>Stage III: Locally Advanced (Invasive)</h1>
+                <p>
+                    <ul class="card-ul">
+                    <li>Stage IIIA: The tumor is larger than 5 cm and has spread to 1-3 axillary lymph nodes, or it is smaller than 5 cm but has spread to 4-9 axillary lymph nodes, or the cancer is extensive in the lymph nodes near the breastbone.</li>
+                    <li>Stage IIIB: The tumor may be any size and has spread to the chest wall or skin of the breast, causing swelling or ulceration, and may involve up to 9 axillary lymph nodes.</li>
+                    <li>Stage IIIC: The tumor can be any size and has spread to 10 or more axillary lymph nodes, or has spread to lymph nodes above or below the collarbone, or to internal mammary nodes.</li>
+                </ul>
+                    
+                    </p>
+            </div>
+            <div class="card">
+                <h1>Stage IV: Metastatic (Advanced)</h1>
+                <p>
+                <ul class="card-ul"> 
+                    <li>Stage IV breast cancer, also known as metastatic breast cancer, means the cancer has spread beyond the breast and nearby lymph nodes to other parts of the body, such as the bones, liver, lungs, or brain. It is considered advanced or terminal.</li>
+                </ul>
+                    
+                    </p>
+            </div>
+
+        </div>
+    </div>
+
+    <br><br><br>
+{%endblock%}
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>BREAST CANCER</h1>
+                <p style="text-align: center;">Courage-Hope-Triumph</p>
+            </div>
+            <p>&copy; 2024 Breast Cancer Awareness. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+
+<script src="../static/script.js"></script>
+
+</body>
+</html>

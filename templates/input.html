@@ -1,0 +1,56 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="main-form">
+    <div class="form-container" id="formContainer">
+        <form method="post" id="myForm" action="/input">
+            <div class="image-container">
+                <img src="../static/images/pic5.jpg" alt="Description of image">
+            </div>
+            <div class="form-columns">
+                <div class="form-column">
+                    <label for="radius">Radius Mean</label>
+                    <input type="text" name="radius" id="radius" required>
+
+                    <label for="texture_mean">Texture Mean</label>
+                    <input type="text" name="texture_mean" id="texture_mean" required>
+
+                    <label for="perimeter_mean">Perimeter Mean</label>
+                    <input type="text" name="perimeter_mean" id="perimeter_mean" required>
+
+                    <label for="area_mean">Area Mean</label>
+                    <input type="text" name="area_mean" id="area_mean" required>
+
+                    <label for="smoothness_mean">Smoothness Mean</label>
+                    <input type="text" name="smoothness_mean" id="smoothness_mean" required>
+                </div>
+                <div class="form-column">
+                    <label for="concavity_mean">Concavity Mean</label>
+                    <input type="text" name="concavity_mean" id="concavity_mean" required>
+
+                    <label for="concave_points_mean">Concave Points Mean</label>
+                    <input type="text" name="concave_points_mean" id="concave_points_mean" required>
+
+                    <label for="symmetry_mean">Symmetry Mean</label>
+                    <input type="text" name="symmetry_mean" id="symmetry_mean" required>
+
+                    <label for="fractal_dimension_mean">Fractal Dimension Mean</label>
+                    <input type="text" name="fractal_dimension_mean" id="fractal_dimension_mean" required>
+                    
+                    
+                </div>
+            </div>
+            
+            
+
+            
+
+            <div class="submit-container">
+                <input type="submit" value="SUBMIT">
+            </div>
+        </form>
+    </div>
+</div>
+<br><br><br><br>
+{% endblock %}
